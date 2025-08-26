@@ -7,7 +7,7 @@ import api from "../api/axios";
 import PriorityBadge from "../components/PriorityBadge.jsx";
 
 // socket connection
-const socket = io("http://localhost:8000/api/", { withCredentials: true });
+const socket = io("https://s-o-s.onrender.com/api/", { withCredentials: true });
 
 // Fix for default markers in react-leaflet
 delete L.Icon.Default.prototype._getIconUrl;
