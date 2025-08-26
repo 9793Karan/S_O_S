@@ -8,7 +8,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import api from "../api/axios";
 
-const socket = io("http://localhost:8000/api/", { withCredentials: true });
+const socket = io("https://s-o-s.onrender.com/api/", { withCredentials: true });
 
 // Fix for default markers in react-leaflet
 delete L.Icon.Default.prototype._getIconUrl;
