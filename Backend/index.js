@@ -10,7 +10,7 @@ import notificationRoutes from "./routes/notification.routes.js";
 
 const app = express();
 const server = http.createServer(app);
-export const io = new Server(server, { cors: { origin: "http://localhost:5173", credentials: true } });
+export const io = new Server(server, { cors: { origin: "https://s-o-s-1.onrender.com", credentials: true } });
 
 export const onlineResponders = new Map();
 
@@ -27,7 +27,7 @@ io.on("connection", (socket) => {
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "https://s-o-s-1.onrender.com", credentials: true }));
 db();
 app.use("/api/auth", authRoutes);
 app.use("/api/sos", sosRoutes);
